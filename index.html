@@ -21,6 +21,21 @@ input,select,textarea{font-family:inherit}
 input:focus,select:focus,textarea:focus{outline:3px solid #fc4710;outline-offset:1px}
 .qform{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 @media (max-width:640px){.qform{grid-template-columns:1fr} .qform>*{grid-column:1/-1!important} nav{display:none!important}}
+.wc-hero{display:flex;flex-wrap:wrap;align-items:center;gap:40px 56px}
+.wc-hero-text{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.wc-hero-art{flex:1 1 360px;max-width:520px;margin:0 auto}
+.wc-hero-art svg{display:block;width:100%;height:auto;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,0.35)}
+.wc-sun{animation:wc-rise 9s ease-in-out infinite alternate}
+.wc-c1{animation:wc-drift 46s linear infinite}
+.wc-c2{animation:wc-drift 64s linear infinite;animation-delay:-30s}
+.wc-c3{animation:wc-drift 80s linear infinite;animation-delay:-55s}
+.wc-flag{transform-origin:340px 92px;animation:wc-wave 1.4s ease-in-out infinite alternate}
+.wc-trail{stroke-dasharray:2 9;animation:wc-march 1.2s linear infinite}
+@keyframes wc-rise{from{transform:translateY(150px)}to{transform:translateY(0)}}
+@keyframes wc-drift{from{transform:translateX(-220px)}to{transform:translateX(720px)}}
+@keyframes wc-wave{from{transform:skewY(-9deg) scaleX(1)}to{transform:skewY(9deg) scaleX(.88)}}
+@keyframes wc-march{to{stroke-dashoffset:-11}}
+@media (prefers-reduced-motion:reduce){.wc-sun,.wc-c1,.wc-c2,.wc-c3,.wc-flag,.wc-trail{animation:none}}
 </style>
 </head>
 <body>
@@ -49,7 +64,8 @@ input:focus,select:focus,textarea:focus{outline:3px solid #fc4710;outline-offset
 <path d="M0 260 L220 120 L330 190 L520 40 L700 170 L860 90 L1040 200 L1230 70 L1440 180 L1440 260 Z" fill="#363636"/>
 <path d="M0 260 L220 120 L330 190 L520 40 L700 170 L860 90 L1040 200 L1230 70 L1440 180" fill="none" stroke="#fc4710" stroke-width="4"/>
 </svg>
-<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 200px; position: relative; display: flex; flex-direction: column; gap: 24px; align-items: flex-start">
+<div class="wc-hero" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 200px; position: relative">
+<div class="wc-hero-text">
 <span style="display: inline-block; background: rgba(252,71,16,0.16); color: #ff8a5c; font-weight: 700; font-size: 16px; padding: 6px 16px; border-radius: 999px">טיולים שנתיים · בתי ספר · תנועות נוער</span>
 <h1 style="margin: 0; font-size: clamp(38px, 6vw, 72px); line-height: 1.08; font-weight: 900; max-width: 900px">צריכים חובש ומדריך<br><span style="color: #fc4710">לטיול השנתי?</span></h1>
 <p style="margin: 0; font-size: clamp(18px, 2vw, 22px); max-width: 680px; color: #e6e6e6">Winner Climb מספקת חובשים מוסמכים ומדריכי טיולים מנוסים לטיולים שנתיים, ימי שטח ופעילויות חוץ – כדי שאתם תתרכזו בתלמידים ואנחנו נדאג לבטיחות ולמסלול.</p>
@@ -58,6 +74,34 @@ input:focus,select:focus,textarea:focus{outline:3px solid #fc4710;outline-offset
 <a href="https://wa.me/972528385811" style="display: flex; align-items: center; gap: 10px; border: 2px solid #ffffff; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 19px; padding: 13px 28px; border-radius: 999px; min-height: 52px">
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"/></svg>
 שלחו וואטסאפ</a>
+</div>
+</div>
+<div class="wc-hero-art">
+<svg viewBox="0 0 680 380" role="img" aria-label="איור מונפש: קבוצת מטיילים עולה בשביל אל פסגת הר עם זריחה">
+<defs><clipPath id="wc-frame"><rect x="0" y="0" width="680" height="380"/></clipPath></defs>
+<g clip-path="url(#wc-frame)">
+<rect x="0" y="0" width="680" height="380" fill="#FCE8D8"/>
+<rect x="0" y="230" width="680" height="150" fill="#F9D2B8"/>
+<g class="wc-sun"><circle cx="505" cy="105" r="62" fill="#FDB08F"/><circle cx="505" cy="105" r="44" fill="#FC4710"/></g>
+<g class="wc-c1" fill="#FFFFFF"><ellipse cx="80" cy="70" rx="46" ry="14"/><ellipse cx="112" cy="60" rx="30" ry="14"/><ellipse cx="56" cy="62" rx="22" ry="10"/></g>
+<g class="wc-c2" fill="#FFFFFF"><ellipse cx="90" cy="130" rx="38" ry="11"/><ellipse cx="116" cy="122" rx="24" ry="11"/></g>
+<g class="wc-c3" fill="#FFF6EF"><ellipse cx="70" cy="40" rx="30" ry="9"/><ellipse cx="94" cy="34" rx="18" ry="8"/></g>
+<polygon points="170,380 440,160 680,340 680,380" fill="#B9AFA8"/>
+<polygon points="0,380 0,290 140,180 300,380" fill="#8C8580"/>
+<polygon points="430,380 570,200 680,310 680,380" fill="#6F6A66"/>
+<polygon points="50,380 340,110 630,380" fill="#2D2D2D"/>
+<polygon points="340,110 311,137 327,132 340,144 353,132 369,137" fill="#FFFFFF"/>
+<polygon points="50,380 340,110 300,380" fill="#3A3A3A"/>
+<polygon points="340,110 311,137 327,132 340,144" fill="#EDEDED"/>
+<path id="wc-route" class="wc-trail" d="M120,366 C200,354 252,332 216,302 C186,277 292,266 286,236 C281,206 336,192 326,162 L339,116" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+<line x1="340" y1="112" x2="340" y2="84" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+<polygon class="wc-flag" points="340,85 364,91 340,98" fill="#FC4710"/>
+<circle r="5.5" fill="#FC4710" stroke="#2D2D2D" stroke-width="1.5"><animateMotion dur="10s" repeatCount="indefinite" begin="-1.4s"><mpath href="#wc-route"/></animateMotion></circle>
+<circle r="5" fill="#FFFFFF" stroke="#2D2D2D" stroke-width="1.5"><animateMotion dur="10s" repeatCount="indefinite" begin="-0.7s"><mpath href="#wc-route"/></animateMotion></circle>
+<circle r="5" fill="#FFFFFF" stroke="#2D2D2D" stroke-width="1.5"><animateMotion dur="10s" repeatCount="indefinite" begin="0s"><mpath href="#wc-route"/></animateMotion></circle>
+<rect x="0" y="366" width="680" height="14" fill="#232323"/>
+</g>
+</svg>
 </div>
 </div>
 </section>
