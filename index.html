@@ -36,6 +36,9 @@ input:focus,select:focus,textarea:focus{outline:3px solid #fc4710;outline-offset
 @keyframes wc-wave{from{transform:skewY(-9deg) scaleX(1)}to{transform:skewY(9deg) scaleX(.88)}}
 @keyframes wc-march{to{stroke-dashoffset:-11}}
 @media (prefers-reduced-motion:reduce){.wc-sun,.wc-c1,.wc-c2,.wc-c3,.wc-flag,.wc-trail{animation:none}}
+summary::-webkit-details-marker{display:none}
+details[open] .faq-plus{transform:rotate(45deg)}
+.faq-plus{transition:transform .2s}
 </style>
 </head>
 <body>
@@ -49,6 +52,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid #fc4710;outline-offset
 <a href="#services" style="color: #2d2d2d; text-decoration: none">השירותים</a>
 <a href="#how" style="color: #2d2d2d; text-decoration: none">איך זה עובד</a>
 <a href="#why" style="color: #2d2d2d; text-decoration: none">למה אנחנו</a>
+<a href="#faq" style="color: #2d2d2d; text-decoration: none">שאלות נפוצות</a>
 <a href="#contact" style="color: #2d2d2d; text-decoration: none">צור קשר</a>
 </nav>
 <a href="tel:0528385811" style="display: flex; align-items: center; gap: 10px; background: #fc4710; color: #ffffff; text-decoration: none; font-weight: 800; font-size: 19px; padding: 11px 22px; border-radius: 999px; min-height: 48px">
@@ -206,26 +210,38 @@ input:focus,select:focus,textarea:focus{outline:3px solid #fc4710;outline-offset
 </div>
 </section>
 
-<!-- Testimonials (placeholders) -->
-<section style="background: #ffffff">
-<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<!-- FAQ -->
+<section id="faq" style="background: #ffffff">
+<div style="max-width: 900px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 32px">
 <div style="display: flex; flex-direction: column; gap: 10px">
-<span style="color: #c7350a; font-weight: 800; font-size: 16px; letter-spacing: 0.04em">ממליצים עלינו</span>
-<h2 style="margin: 0; font-size: clamp(30px, 4vw, 46px); line-height: 1.15; font-weight: 900">מה אומרים עלינו</h2>
+<span style="color: #c7350a; font-weight: 800; font-size: 16px; letter-spacing: 0.04em">שאלות נפוצות</span>
+<h2 style="margin: 0; font-size: clamp(30px, 4vw, 46px); line-height: 1.15; font-weight: 900">כל מה שרציתם לדעת לפני הטיול</h2>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px">
-<figure style="margin: 0; background: #f6f6f6; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; gap: 16px">
-<blockquote style="margin: 0; font-size: 18px">״[כאן ייכנס ציטוט אמיתי מלקוח – למשל רכזת טיולים או מנהל בית ספר]״</blockquote>
-<figcaption style="font-weight: 700; color: #555555">[שם הממליץ/ה], [תפקיד ומוסד]</figcaption>
-</figure>
-<figure style="margin: 0; background: #f6f6f6; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; gap: 16px">
-<blockquote style="margin: 0; font-size: 18px">״[כאן ייכנס ציטוט אמיתי מלקוח]״</blockquote>
-<figcaption style="font-weight: 700; color: #555555">[שם הממליץ/ה], [תפקיד ומוסד]</figcaption>
-</figure>
-<figure style="margin: 0; background: #f6f6f6; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; gap: 16px">
-<blockquote style="margin: 0; font-size: 18px">״[כאן ייכנס ציטוט אמיתי מלקוח]״</blockquote>
-<figcaption style="font-weight: 700; color: #555555">[שם הממליץ/ה], [תפקיד ומוסד]</figcaption>
-</figure>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<details style="background: #f6f6f6; border-radius: 16px; padding: 0 24px">
+<summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-weight: 800; font-size: 20px; min-height: 44px">למי השירות מתאים?<span aria-hidden="true" class="faq-plus" style="color: #fc4710; font-size: 30px; font-weight: 900; line-height: 1">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 17px; color: #555555">לבתי ספר, תנועות נוער, מתנ״סים, קייטנות וכל מסגרת שיוצאת לטיול, יום שטח או פעילות חוץ.</p>
+</details>
+<details style="background: #f6f6f6; border-radius: 16px; padding: 0 24px">
+<summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-weight: 800; font-size: 20px; min-height: 44px">אפשר להזמין רק חובש, בלי מדריך?<span aria-hidden="true" class="faq-plus" style="color: #fc4710; font-size: 30px; font-weight: 900; line-height: 1">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 17px; color: #555555">בהחלט. אפשר להזמין חובש בלבד, מדריך בלבד, או מעטפת מלאה של שניהם יחד – לפי מה שהטיול צריך.</p>
+</details>
+<details style="background: #f6f6f6; border-radius: 16px; padding: 0 24px">
+<summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-weight: 800; font-size: 20px; min-height: 44px">זה מתאים גם לטיול של כמה ימים?<span aria-hidden="true" class="faq-plus" style="color: #fc4710; font-size: 30px; font-weight: 900; line-height: 1">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 17px; color: #555555">כן. אנחנו מלווים גם טיולים של יום אחד וגם טיולים רב־יומיים. ספרו לנו על המסלול ונבנה הצעה בהתאם.</p>
+</details>
+<details style="background: #f6f6f6; border-radius: 16px; padding: 0 24px">
+<summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-weight: 800; font-size: 20px; min-height: 44px">החובש מתואם מראש עם צוות בית הספר?<span aria-hidden="true" class="faq-plus" style="color: #fc4710; font-size: 30px; font-weight: 900; line-height: 1">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 17px; color: #555555">כן. לפני הטיול אנחנו מתאמים מול איש הקשר שלכם את המסלול, לוח הזמנים ומה שחשוב לדעת על הקבוצה.</p>
+</details>
+<details style="background: #f6f6f6; border-radius: 16px; padding: 0 24px">
+<summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-weight: 800; font-size: 20px; min-height: 44px">כמה זמן מראש כדאי להזמין?<span aria-hidden="true" class="faq-plus" style="color: #fc4710; font-size: 30px; font-weight: 900; line-height: 1">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 17px; color: #555555">מומלץ לפנות כמה שיותר מוקדם, במיוחד בעונת הטיולים השנתיים. גם אם הטיול קרוב – פנו אלינו ונבדוק זמינות.</p>
+</details>
+<details style="background: #f6f6f6; border-radius: 16px; padding: 0 24px">
+<summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-weight: 800; font-size: 20px; min-height: 44px">איך מקבלים הצעת מחיר?<span aria-hidden="true" class="faq-plus" style="color: #fc4710; font-size: 30px; font-weight: 900; line-height: 1">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 17px; color: #555555">ממלאים את הטופס למטה, מתקשרים או שולחים וואטסאפ ל־<span dir="ltr">052-838-5811</span> – ונחזור אליכם עם הצעה מותאמת.</p>
+</details>
 </div>
 </div>
 </section>
